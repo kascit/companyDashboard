@@ -226,6 +226,7 @@
 
     function assignTasks() {
   let taskContent = `
+  <br><br><br><br>
     <h4>Assign Task to Employee</h4>
     <form id="taskAssignForm">
       <label for="employeeId">Employee ID:</label>
@@ -258,7 +259,7 @@
 
 
     function viewAttendance() {
-  let attendanceContent = `<h4>Employee Attendance:</h4><ul>`;
+  let attendanceContent = `<br><br><br><br><h4>Employee Attendance:</h4><ul>`;
   
   employees.forEach(emp => {
     const attendanceRecords = emp.attendance && emp.attendance.length > 0 
@@ -322,7 +323,7 @@ function submitTicket(employeeId) {
 
     function markTaskCompleted(employeeId) {
   const employee = employees.find(emp => emp.id === employeeId);
-  let taskContent = '<h4>Your Assigned Tasks:</h4><ul>';
+  let taskContent = '<br><br><br><br><h4>Your Assigned Tasks:</h4><ul>';
   
   employee.tasks.forEach((task, index) => {
     taskContent += `<li>${index + 1}. ${task} <button class="btn btn-success" onclick="completeTask(${employeeId}, ${index})">Mark as Completed</button></li>`;
@@ -342,7 +343,7 @@ function submitTicket(employeeId) {
     }
 
     function requestLeave(employeeId) {
-  let leaveContent = `
+  let leaveContent = `<br><br><br><br>
     <h4>Request Leave</h4>
     <form id="leaveForm">
       <label for="leaveReason">Reason for Leave:</label>
